@@ -1,2 +1,3 @@
-questo file non è vuoto, ma il suo contenuto è irrilevante
+questo file non è vuoto, ma il suo contenuto è inutile
+aggiungo una riga all'interno del testo
 aggiungo una riga al primo file
