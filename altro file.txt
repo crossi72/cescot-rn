@@ -1,1 +1,2 @@
 questo file è stato modificato radicalmente
+questa modifica esiste solamente nella versione 1.1
