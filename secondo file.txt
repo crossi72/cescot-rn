@@ -1,4 +1,0 @@
-questa è la prima riga del file
-riga modificata da un tizio dall'altra parte del mondo
-anche questo file è stato modificato
-test di collaborazione

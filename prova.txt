@@ -1,3 +1,0 @@
-questo file non è vuoto, ma il suo contenuto è inutile
-aggiungo una riga al primo file
-nuova riga inutile
