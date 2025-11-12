@@ -1,0 +1,9 @@
+/* rendo rosso il testo degli h1 */
+h1 {
+	color: red;
+}
+
+/* rendo verde il testo */
+.text-green {
+	color: green;
+}
