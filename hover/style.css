@@ -1,0 +1,25 @@
+/*
+H1 rosso
+- i DIV devono avere sfondo giallo e testo rosso
+Su hover:
+- H1 testo bianco, sfondo rosso
+- DIV dispari sfondo blu e testo giallo
+- DIV pari sfondo rosso e testo giallo
+*/
+h1 {
+	color: red;
+}
+div {
+	background-color: yellow;
+	color: red;
+}
+
+div:hover {
+	color: yellow;
+}
+.pari:hover {
+	background-color: red;
+}
+.dispari:hover {
+	background-color: blue;
+}
