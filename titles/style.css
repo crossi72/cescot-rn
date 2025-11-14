@@ -1,0 +1,18 @@
+/*
+- H1 rosso
+- il primo H2 deve essere blu
+- il secondo H2 deve essere verde
+- H3 giallo
+*/
+h1 {
+	color: red;
+}
+.text-blu {
+	color: blue;
+}
+.text-green {
+	color: green;
+}
+h3 {
+	color: yellow;
+}
