@@ -20,10 +20,26 @@
 
 		// Crea i div in base al numero generato
 		for ($i = 1; $i <= $numDivs; $i++) {
-			$bgColor = 'gray';
-			$size = '50px';
 
-			printDiv("", "random");
+			//genero un numero casuale per il colore di sfondo
+			$color_index = rand(1, 4);
+
+			switch ($color_index) {
+				case 1:
+					$color = "rosso";
+					break;
+				case 2:
+					$color = "verde";
+					break;
+				case 3:
+					$color = "blu";
+					break;
+				case 4:
+					$color = "giallo";
+					break;
+			}
+
+			printDiv("", "random $color");
 		}
 
 		// Div finale
