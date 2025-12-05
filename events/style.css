@@ -1,0 +1,14 @@
+/*
+- H1 con testo rosso
+- div con sfondo giallo e dimensione 100 x 100
+*/
+h1 {
+	color: red;
+}
+
+.box{
+	background-color: yellow;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+}
