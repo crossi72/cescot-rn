@@ -11,6 +11,7 @@
 	<button id="btn_red">Rosso</button>
 	<button id="btn_yellow">Giallo</button>
 	<button id="btn_blu">Blu</button>
+	<button id="btn_alterna">Alterna</button>
 	<?php
 	/*
 		stampo 20 div
@@ -24,5 +25,5 @@
 		}
 	?>
 </body>
-<script src="script.js?ver=1.0.1"></script>
+<script src="script.js?ver=1.1.0"></script>
 </html>
