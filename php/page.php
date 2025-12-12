@@ -1,3 +1,7 @@
+<?php
+// includo la libreria
+require_once("../library.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,16 +21,3 @@
 	<div class="closing">questa è la fine della pagina</div>
 </body>
 </html>
-
-<?php
-	/**
-	 * receives a strings and a class and prints a div containing the string, using the class for styling
-	 * @param string $text
-	 * @param string $class
-	 * @return void
-	 */
-	function printDiv($text, $class) {
-		echo "<div class='" . $class . "'>" . $text . "</div>";
-	}
-
-?>

@@ -1,3 +1,7 @@
+<?php
+// includo la libreria
+require_once("../library.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,15 +51,3 @@
 	?>
 </body>
 </html>
-
-<?php
-	/**
-	 * riceve una stringa e stampa un div con la stringa passata come contenuto
-	 * @param string $content Il contenuto da inserire nel div
-	 * @param string $class La classe da applicare al div
-	 * @return void
-	 */
-	function printDiv($content, $class) {
-		echo "<div class='$class'>$content</div>";
-	}
-?>

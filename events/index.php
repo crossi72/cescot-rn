@@ -1,3 +1,7 @@
+<?php
+// includo la libreria
+require_once("../library.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +10,6 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
 	<h1>eventi javascript</h1>
 	<button id="btn_red">Rosso</button>
 	<button id="btn_yellow">Giallo</button>
@@ -18,10 +21,6 @@
 	*/
 		for ($i = 1; $i <= 20; $i++) {
 			printDiv("", "box");
-		}
-
-		function printDiv($content, $class) {
-			echo "<div class='$class'>$content</div>";
 		}
 	?>
 </body>
