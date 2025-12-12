@@ -4,38 +4,32 @@ quando l'utente clicca sul pulsante i div cambiano colore di sfondo in rosso
 // seleziono il pulsante
 let myButton = document.getElementById("btn_red");
 
-//aggiungo l'evento click
-myButton.addEventListener("click", function() {
+function change_divs_style(backgroundColor) {
 	// seleziono tutti i div
 	let divs = document.getElementsByClassName("box");
 	// ciclo su tutti i div e cambio il colore di sfondo
 	for (let i = 0; i < divs.length; i++) {
-		divs[i].style.backgroundColor = "red";
+		divs[i].style.backgroundColor = backgroundColor;
 	}
+}
+
+//aggiungo l'evento click
+myButton.addEventListener("click", function() {
+	change_divs_style("red");
 });
 
 myButton = document.getElementById("btn_yellow");
 
 //aggiungo l'evento click
 myButton.addEventListener("click", function() {
-	// seleziono tutti i div
-	let divs = document.getElementsByClassName("box");
-	// ciclo su tutti i div e cambio il colore di sfondo
-	for (let i = 0; i < divs.length; i++) {
-		divs[i].style.backgroundColor = "yellow";
-	}
+	change_divs_style("yellow");
 });
 
 myButton = document.getElementById("btn_blu");
 
 //aggiungo l'evento click
 myButton.addEventListener("click", function() {
-	// seleziono tutti i div
-	let divs = document.getElementsByClassName("box");
-	// ciclo su tutti i div e cambio il colore di sfondo
-	for (let i = 0; i < divs.length; i++) {
-		divs[i].style.backgroundColor = "blue";
-	}
+	change_divs_style("blue");
 });
 
 myButton = document.getElementById("btn_alterna");
