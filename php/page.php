@@ -1,6 +1,6 @@
 <?php
 // includo la libreria
-require_once("../library.php");
+require_once("../lib/library.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
