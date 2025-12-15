@@ -32,6 +32,20 @@ myButton.addEventListener("click", function() {
 	change_divs_style("blue");
 });
 
+myButton = document.getElementById("btn_green");
+
+//aggiungo l'evento click
+myButton.addEventListener("click", function() {
+	change_divs_style("green");
+});
+
+myButton = document.getElementById("btn_orange");
+
+//aggiungo l'evento click
+myButton.addEventListener("click", function() {
+	change_divs_style("orange");
+});
+
 myButton = document.getElementById("btn_alterna");
 
 //aggiungo l'evento click
@@ -48,13 +62,5 @@ myButton.addEventListener("click", function() {
 	for (let i = 2; i < divs.length; i+=3) {
 		divs[i].style.backgroundColor = "blue";
 	}
-	// for (let i = 0; i < divs.length; i++) {
-	// 	if(i % 3 == 0) {
-	// 		divs[i].style.backgroundColor = "red";
-	// 	} else if (i % 3 == 1) {
-	// 		divs[i].style.backgroundColor = "yellow";
-	// 	} else {
-	// 		divs[i].style.backgroundColor = "blue";
-	// 	}
-	// }
+
 });

@@ -14,6 +14,8 @@ require_once("../lib/library.php");
 	<button id="btn_red">Rosso</button>
 	<button id="btn_yellow">Giallo</button>
 	<button id="btn_blu">Blu</button>
+	<button id="btn_green">Verde</button>
+	<button id="btn_orange">Arancione</button>
 	<button id="btn_alterna">Alterna</button>
 	<?php
 	/*
