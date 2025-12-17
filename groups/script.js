@@ -84,8 +84,20 @@ function change_divs_color(div_class, bg_color) {
 }
 	
 function change_divs_style(divs, backgroundColor) {
-		// ciclo su tutti i div e cambio il colore di sfondo
+	// ciclo su tutti i div e cambio il colore di sfondo
 	for (let i = 0; i < divs.length; i++) {
-		divs[i].style.backgroundColor = backgroundColor;
+		// rimuovo le classi di sfondo precedenti
+		divs[i].classList.remove("bg_red");
+		divs[i].classList.remove("bg_blue");
+		divs[i].classList.remove("bg_yellow");
+		
+		// aggiungo la nuova classe di sfondo
+		if (backgroundColor == "red") {
+			divs[i].classList.add("bg_red");
+		} else if (backgroundColor == "blue") {
+			divs[i].classList.add("bg_blue");
+		} else if (backgroundColor == "yellow") {
+			divs[i].classList.add("bg_yellow");
+		}
 	}
 }

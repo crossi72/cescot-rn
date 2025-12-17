@@ -22,3 +22,13 @@
 h2{
 	clear: both;
 }
+
+.bg_red{
+	background-color: red;
+}
+.bg_blue{
+	background-color: blue;
+}
+.bg_yellow{
+	background-color: yellow;
+}
