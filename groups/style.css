@@ -2,11 +2,23 @@
 	width: 150px;
 	height: 150px;
 	margin: 5px;
+	float: left;
 }
 
 .div_100{
 	width: 100px;
 	height: 100px;
 	margin: 5px;
+	float: left;
 }
 
+.div_50{
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	float: left;
+}
+
+h2{
+	clear: both;
+}
