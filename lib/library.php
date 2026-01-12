@@ -1,6 +1,22 @@
 <?php
 
 /**
+ * Connects a database
+ * @param string $host the database host
+ * @param string $username the database username
+ * @param string $password the database password
+ * @param string $dbname the database name
+ * @return mysqli the connection object
+ */
+function connectDatabase($dbname, $host = 'localhost', $username = 'root', $password = '') {
+	$mysqli = mysqli_connect($host, $username, $password, $dbname);
+	if (!$mysqli) {
+		die("Connection failed: " . mysqli_connect_error());
+	}
+	return $mysqli;
+}
+
+/**
  * prints a div
  *
  * @param string $content the text inside the div
