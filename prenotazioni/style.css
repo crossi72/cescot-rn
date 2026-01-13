@@ -1,0 +1,23 @@
+/*
+- H1 di colore rosso
+- H2 con sfondo rosso e testo bianco
+- saldo in grassetto
+- div con bordo nero da 2px, margine e padding di 5px, larghezza massima di 100px
+*/
+h1 {
+	color: red;
+}
+h2 {
+	background-color: red;
+	color: white;
+}
+.saldo {
+	font-weight: bold;
+}
+div.prenotazione {
+	border: 2px solid black;
+	margin: 5px;
+	padding: 5px;
+	max-width: 250px;
+	float: left;
+}
