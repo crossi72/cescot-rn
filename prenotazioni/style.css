@@ -18,6 +18,7 @@ h2 {
 	font-weight: bold;
 }
 div.prenotazione,
+div.regione,
 div.cliente {
 	border: 2px solid black;
 	margin: 5px;
