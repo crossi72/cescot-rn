@@ -10,14 +10,19 @@ h1 {
 h2 {
 	background-color: red;
 	color: white;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 .saldo {
 	font-weight: bold;
 }
-div.prenotazione {
+div.prenotazione,
+div.cliente {
 	border: 2px solid black;
 	margin: 5px;
-	padding: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
 	max-width: 250px;
 	float: left;
 }
