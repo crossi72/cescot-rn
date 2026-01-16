@@ -8,28 +8,34 @@
 </head>
 <body>
 	<h1>Regioni</h1>
+	<form method="get">
+		<label for="regione">Cerca regione:</label>
+		<input type="text" id="regione" name="regione">
+		<input type="submit" value="Cerca">
+	</form>
+
 	<?php
-		/*
-		un div per ogni regione, contenente
-  - H2 contenente nome della regione
-  - numero di prenotazioni
-  - importo totale delle prenotazioni
-  - saldo (importo - caparra) totale delle prenotazioni
-		*/
 		require_once '../lib/library.php';
+
+		//leggo il parametro 'regione' dalla query string
+		$regione_da_cercare = isset($_GET['regione']) ? $_GET['regione'] : '';
+
 		//inizializzo la connessione al database
 		$db_connection = connectDatabase('prenotazioni');
+
 		//eseguo una query per ottenere i dati richiesti
-		$query = 'SELECT regioni.regione, COUNT(*) AS numero_prenotazioni,
+		$query = "SELECT regioni.regione, COUNT(*) AS numero_prenotazioni,
 			ROUND(SUM(prenotazioni.importo), 2) AS totale_importo,
 			ROUND(SUM(prenotazioni.importo - prenotazioni.caparra), 2) AS totale_saldo
 			FROM regioni
 			INNER JOIN citta ON regioni.id_regione = citta.regione
 			INNER JOIN clienti ON citta.id_citta = clienti.citta
 			INNER JOIN prenotazioni ON clienti.id_cliente = prenotazioni.cliente
-			GROUP BY regioni.regione';
+			WHERE regioni.regione LIKE '%" . $regione_da_cercare . "%'
+			GROUP BY regioni.regione";
 
 		$result = mysqli_query($db_connection, $query);
+
 		//ciclo sulle righe restituite e stampo i dati di ogni regione
 		while ($row = mysqli_fetch_assoc($result)) {
 			$regioneDivContent = "<h2>" . $row['regione'] . "</h2>

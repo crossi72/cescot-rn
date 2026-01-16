@@ -9,12 +9,15 @@
 	<h1>Clienti della citta selezionata</h1>
 	<?php
 		require_once '../lib/library.php';
+
 		//inizializzo la connessione al database
 		$db_connection = connectDatabase('prenotazioni');
+
 		//ottengo l'id della citta selezionata dal form
 		$citta_id = $_POST['citta'];
+
 		//eseguo una query per ottenere tutti i clienti della citta selezionata
-		$query = 'SELECT * FROM clienti WHERE citta = ' . intval($citta_id);
+		$query = "SELECT * FROM clienti WHERE citta = " . intval($citta_id);
 
 		$result = mysqli_query($db_connection, $query);
 		//stampo i clienti trovati

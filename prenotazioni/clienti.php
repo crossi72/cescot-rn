@@ -14,12 +14,36 @@
 		//inizializzo la connessione al database
 		$db_connection = connectDatabase('prenotazioni');
 
+		//carico le regioni dalla tabella regioni
+		$query = "SELECT * FROM regioni";
+		$result = mysqli_query($db_connection, $query);
+
+		//mostro una select che contiene tutte le regioni
+		?>
+		<form method=POST>
+			<label for='regione'>Seleziona una regione:</label>
+			<select name='regione' id='regione'>
+				<option value='0'>-- Seleziona una regione --</option>
+				<?php
+				while ($row = mysqli_fetch_assoc($result)) {
+					echo "<option value='" . $row['ID_regione'] . "'>" . $row['regione'] . "</option>";
+				}
+				?>
+			</select>
+			<input type='submit' value='Seleziona'>
+		</form>
+
+		<?php
+		//leggo l'ID della regione dal parametro POST
+		$regione_id = isset($_POST['regione']) ? intval($_POST['regione']) : 0;
+
 		//eseguo una query per ottenere tutti i clienti con i dati della regione, area geografica e citta
-		$query = 'SELECT clienti.nome, clienti.cognome, regioni.regione,
+		$query = "SELECT clienti.nome, clienti.cognome, regioni.regione,
 			regioni.area_geografica, citta.citta
 			FROM clienti
 			INNER JOIN citta ON clienti.citta = citta.id_citta
-			INNER JOIN regioni ON citta.regione = regioni.id_regione';
+			INNER JOIN regioni ON citta.regione = regioni.id_regione
+			WHERE regioni.id_regione = " . $regione_id;
 
 		$result = mysqli_query($db_connection, $query);
 
